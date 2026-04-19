@@ -1,0 +1,33 @@
+# Logs
+*.log
+*.tmp
+*.bak
+
+# Editors
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Build artifacts
+build/
+cmake_targets/ran_build/
+cmake_targets/lte_build_oai/
+cmake_targets/ran_build/build/
+cmake_targets/ran_build/install/
+
+# UHD / OAI generated files
+*.o
+*.a
+*.so
+*.out
+
+# Local env
+.env
+venv/

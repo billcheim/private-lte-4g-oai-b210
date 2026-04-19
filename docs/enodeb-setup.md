@@ -1,35 +1,49 @@
-# eNodeB Setup
+# eNodeB Setup (USRP B210)
 
-## Purpose
+## Goal
 
-The eNodeB provides LTE radio access between UE devices and the EPC/Core.
+Configure and start the LTE eNodeB using OpenAirInterface and USRP B210.
 
-## Hardware
+## Verify SDR Detection
 
-- USRP B210
-- USB 3.0 host system
-- LTE antennas
+uhd_find_devices
 
-## Typical Configuration Items
+## Example Config Path
 
-- LTE band
-- EARFCN / frequency
-- bandwidth
-- PLMN
-- TAC
-- transmit gain
-- sample rate
+~/openairinterface5g/targets/PROJECTS/GENERIC-LTE-EPC/CONF/
 
-## Startup Flow
+## Typical Parameters to Review
 
-1. Connect USRP B210
-2. Confirm host detects SDR
-3. Load eNodeB configuration
-4. Start eNodeB service
-5. Verify synchronization
+- downlink_frequency
+- uplink_frequency_offset
+- eutra_band
+- N_RB_DL
+- tracking_area_code
+- mobile_country_code
+- mobile_network_code
+- tx_gain
+- rx_gain
+
+## Start eNodeB Example
+
+cd ~/openairinterface5g/cmake_targets/ran_build/build
+
+sudo ./lte-softmodem \
+-O ~/openairinterface5g/targets/PROJECTS/GENERIC-LTE-EPC/CONF/enb.band7.tm1.25PRB.usrpb210.conf
 
 ## Validation
 
-- UE sees LTE cell
-- UE attempts attach
-- Core receives signaling
+- USRP initializes
+- RF sync successful
+- Cell starts broadcasting
+- UE can detect LTE cell
+
+## Troubleshooting
+
+If startup fails:
+
+- check USB 3.0 connection
+- check UHD version
+- verify config file path
+- lower gain settings
+- review console logs

@@ -1,34 +1,48 @@
-# EPC / Core Setup
+# EPC / Core Setup (Real Guide)
 
-## Components
+## Goal
 
-Typical LTE EPC includes:
+Start the LTE core network required for UE attachment.
 
-- MME
+## Typical Components
+
 - HSS
+- MME
 - SPGW
 
-## Responsibilities
+## Example Start Order
 
-- UE authentication
-- IP address assignment
-- mobility management
-- packet routing
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 
-## Example Flow
+## Start HSS
 
-1. Start database services if required
-2. Start HSS
-3. Start MME
-4. Start SPGW
-5. Verify interfaces are up
+sudo ./oai_hss
+
+## Start MME
+
+sudo ./oai_mme
+
+## Start SPGW
+
+sudo ./oai_spgw
 
 ## Validation
 
-- UE can attach
-- UE receives IP address
-- UE can route traffic
+Check:
+
+- services remain running
+- interfaces created
+- no critical errors in logs
+
+## Then Start eNodeB
+
+After EPC is running, start the eNodeB.
+
+## Then Attach UE
+
+Insert provisioned SIM and test registration.
 
 ## Notes
 
-Configuration depends on OAI release and selected deployment model.
+Binary names can vary by OAI release.
+Use the build output of your selected branch.

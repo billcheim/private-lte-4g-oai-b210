@@ -1,31 +1,36 @@
-# SIM Provisioning
+# SIM Provisioning (Practical Guide)
 
-## Purpose
+## Goal
 
-Private LTE deployments require SIM / USIM identities recognized by the core network.
+Provision a private SIM / USIM so the UE can authenticate to the LTE core.
 
-## Typical Parameters
+## Typical Subscriber Parameters
 
 - IMSI
 - Ki
 - OPC or OP
-- MSISDN (optional)
 - APN
-- subscriber profile
+- MSISDN (optional)
 
-## Workflow
+## Practical Workflow
 
-1. Create subscriber entry in HSS database
-2. Program SIM card with matching identity
-3. Insert SIM into UE device
-4. Power on UE and attempt attach
+1. Create subscriber record in the HSS database
+2. Program the SIM card with matching credentials
+3. Insert the SIM into the UE
+4. Power on the UE
+5. Attempt LTE attach
 
-## Validation
+## Example Validation
 
-- UE authenticates successfully
+Confirm that:
+
+- IMSI matches the HSS entry
+- authentication succeeds
 - UE receives IP address
-- Data session is active
+- data session becomes active
 
 ## Notes
 
-Use lab-only subscriber data and secure handling of credentials.
+Exact tools depend on the SIM programming workflow used in your lab.
+
+Use lab-only credentials and handle subscriber secrets carefully.
