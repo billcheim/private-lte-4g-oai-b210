@@ -1,0 +1,23 @@
+{
+  "title": "Private LTE 4G Network with OAI and USRP B210",
+  "description": "Documentation and deployment-oriented lab guide for building a private LTE 4G network using OpenAirInterface and USRP B210.",
+  "creators": [
+    {
+      "name": "Bill Cheim"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "LTE",
+    "4G",
+    "OpenAirInterface",
+    "OAI",
+    "USRP B210",
+    "SDR",
+    "EPC",
+    "eNodeB"
+  ],
+  "upload_type": "software",
+  "access_right": "open"
+}
+

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Private LTE 4G Network with OAI and USRP B210"
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Cheimaras"
+    given-names: "Vasileios"
+repository-code: "https://github.com/billcheim/private-lte-4g-oai-b210"
+license: MIT
+version: "v1.0.0"
+abstract: "Documentation and deployment-oriented lab guide for building a private LTE 4G network using OpenAirInterface and USRP B210."
+keywords:
+  - LTE
+  - 4G
+  - OpenAirInterface
+  - OAI
+  - USRP B210
+  - SDR
+  - EPC
+  - eNodeB
